@@ -23,7 +23,6 @@ export class ProdutosController {
 
   @Post()
   async criar(@Body() produto: Produto): Promise<void> {
-    console.log(produto);
     produtos.push({
       ...produto,
       id: produto.id || produtos.length + 1,
